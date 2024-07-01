@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <style>
+        /* center */
+        .color_picker {
+            /* position: absolute;
+        top: 50%;
+        left: 50%; */
+            display: flex;
+            justify-content: center;
+            align-items: center
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="color_picker">
+        <input title="color picker" type="color" name="color" id="color_picker">
+    </div>
+    <script>
+        const color_picker = document.querySelector("#color_picker");
+        // document.querySelector("body").style.backgroundColor = color_picker.value;
+
+        color_picker.addEventListener("input", () => {
+            document.querySelector("body").style.backgroundColor = color_picker.value;
+            // document.querySelector("body").style.color = color_picker.value;
+        });
+
+    </script>
+</body>
+
+</html>
